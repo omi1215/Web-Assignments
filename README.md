@@ -11,4 +11,4 @@ Description: This task involves implementing a sign-up form.
 Description: This task involves implementing a log-in form.
 
 ## Task 3
-![alt text](image-1.png)
+![alt text](image.png)
