@@ -11,5 +11,4 @@ Description: This task involves implementing a sign-up form.
 Description: This task involves implementing a log-in form.
 
 ## Task 3
-C:\Users\ompar\Downloads\127.0.0.1_5500_Task3.html (2).png
-
+![alt text](image-1.png)
