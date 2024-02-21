@@ -1,0 +1,28 @@
+.main{
+    justify-content: center;
+    text-align: center;
+    background-color: #b8b4a9;
+    height: 250px;
+    padding-top: 50px;
+}
+button{
+    width:inherit;
+    color: white;
+    background-color: #0b57a3;
+    height: 40px;
+}
+
+.fit-image{
+    width: 100%;
+object-fit: cover;
+height: 300px;
+}
+.divider{
+    font-size: 22px;
+}
+.bye{
+    text-align: center;
+    background-color: #82e891;
+    margin-top: 10px;
+    height: 30px;
+}
