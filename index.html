@@ -5,48 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+
+    <script>
+        function validateForm(){
+            let uname = document.forms["myForm"]["uname"].value;
+            let pass = document.forms["myForm"]["pass"].value;
+            let bdate = document.forms["myForm"]["bdate"].value;
+            let email = document.forms["myForm"]["email"].value;
+            let genderMale = document.getElementById("male").checked;
+            let genderFemale = document.getElementById("female").checked;
+            let phone = document.forms["myForm"]["phone"].value;
+            let zipcode = document.forms["myForm"]["zipcode"].value;
+            let country = document.forms["myForm"]["country"].value;
+
+            var passw= /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+
+            if (uname.length < 6 || uname.length > 15) {
+                alert("Name length must be between 6 and 15");
+                return false;
+            }
+            if (!pass.match(passw)) {
+                alert("Password must contain 6 to 20 characters with at least one numeric digit, one uppercase and one lowercase letter");
+                return false;
+            }
+            if (bdate >= new Date()) {
+                alert("Birth is invalid");
+                return false;
+            }
+            if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))) {
+                alert("Invalid email format");
+                return false;
+            }
+            if (isNaN(zipcode)) {
+                alert("Zipcode is invalid");
+                return false;
+            }
+            if (!isNaN(country)) {
+                alert("Country is invalid");
+                return false;
+            }
+
+            alert("Form successfully submitted");
+            return true;
+        }
+    </script>
+    
 </head>
 <body>
     <div class="frm">
-        <form>
-            <h1>Sign</h1>
+        <form onsubmit="return validateForm()" name="myForm">
+            <h2>Sign Up</h2>
             <div class="form-group">
                 <label for="uname">Username:</label>
-                <input type="text" id="uname" name="uname" value="John">
+                <input type="text" id="uname" name="uname" required>
             </div>
             <div class="form-group">
                 <label for="pass">Password:</label>
-                <input type="password" id="pass" name="pass" value="********">
+                <input type="password" id="pass" name="pass" required>
             </div>
             <div class="form-group">
                 <label for="bdate">Birthdate:</label>
-                <input type="date" id="bdate" name="bdate" value="2018-12-31">
+                <input type="date" id="bdate" name="bdate" required>
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="text" id="email" name="email" value="abc@gmail.com">
+                <input type="text" id="email" name="email" required>
             </div>
             <div class="form-group">
                 <label for="gender">Gender:</label>
-                <input type="radio" id="male" name="gender" value="male" style="margin-left: 35px;">
+                <input type="radio" id="male" name="gender" value="male" style="margin-left: 35px;" required>
                 <label for="male">Male</label>
-                <input type="radio" id="female" name="gender" value="female">
+                <input type="radio" id="female" name="gender" value="female" required>
                 <label for="female">Female</label>
             </div>
             <div class="form-group">
                 <label for="phone">Phone:</label>
-                <input type="number" id="phone" name="phone" value="03116536833">
+                <input type="number" id="phone" name="phone" required>
             </div>
             <div class="form-group">
                 <label for="zipcode">ZipCode:</label>
-                <input type="text" id="zipcode" name="zipcode" value="12345">
+                <input type="text" id="zipcode" name="zipcode" required>
             </div>
             <div class="form-group">
                 <label for="country">Country:</label>
-                <input type="text" id="country" name="country" value="Pakistan">
+                <input type="text" id="country" name="country" required>
             </div>
 
-            <input type="submit" value="Submit" style="width: auto; float: right; width: 100px; border-radius: 5px;">
+            <input type="submit" value="Submit" style="float: right; width: 100px; border-radius: 5px;">
         </form>
     </div>
 </body>
