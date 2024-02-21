@@ -11,6 +11,5 @@ Description: This task involves implementing a sign-up form.
 Description: This task involves implementing a log-in form.
 
 ## Task 3
-![Task 3](https://github.com/omi1215/Web-Assignments/assets/143265065/68a662dc-fbc4-452e-8080-9e7636028abf)
-
+C:\Users\ompar\Downloads\127.0.0.1_5500_Task3.html (2).png
 

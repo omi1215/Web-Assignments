@@ -14,8 +14,8 @@ button{
 
 .fit-image{
     width: 100%;
-object-fit: cover;
-height: 300px;
+    object-fit: cover;
+    height: 300px;
 }
 .divider{
     font-size: 22px;
