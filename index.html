@@ -2,10 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>HELLO WORLD!</h1>
+    <div class="frm">
+        <form>
+            <h1>Sign</h1>
+            <div class="form-group">
+                <label for="uname">Username:</label>
+                <input type="text" id="uname" name="uname" value="John">
+            </div>
+            <div class="form-group">
+                <label for="pass">Password:</label>
+                <input type="password" id="pass" name="pass" value="********">
+            </div>
+            <div class="form-group">
+                <label for="bdate">Birthdate:</label>
+                <input type="date" id="bdate" name="bdate" value="2018-12-31">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" value="abc@gmail.com">
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <input type="radio" id="male" name="gender" value="male" style="margin-left: 35px;">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="number" id="phone" name="phone" value="03116536833">
+            </div>
+            <div class="form-group">
+                <label for="zipcode">ZipCode:</label>
+                <input type="text" id="zipcode" name="zipcode" value="12345">
+            </div>
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <input type="text" id="country" name="country" value="Pakistan">
+            </div>
+
+            <input type="submit" value="Submit" style="width: auto; float: right; width: 100px; border-radius: 5px;">
+        </form>
+    </div>
 </body>
 </html>
