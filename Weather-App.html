@@ -8,44 +8,40 @@
     <title>Weather App</title>
 </head>
 <body>
-   <div class="content">
-    <div class="search">
+    <div class="container">
         <h2>Weather Application</h2>
-        <hr>
-        <input type="text" id="location" name="location" placeholder="Enter City">
-        <div class="or-divider">
-            <hr><span>OR</span><hr>
+        <div class="search">
+            <input type="text" class="location" name="location" placeholder="Enter City">
+            <button id="searchBtn">Get Device Location</button>
         </div>
-        <button>Get Device Location</button>
-    </div>
-
-    <div class="weather-body">
-       <img src="/Weather-App-Assets/cloud.png" alt="Weather-Img" class="weather-img">
-
-       <div class="weather-box">
-        <p class="temperature">0 <sup>*C</sup></p>
-        <p class="description">light rain</p>
-       </div>
-       <div class="weather-details">
-        <div class="humidity">
-            <i class="fas fa-droplet"></i>
-            <div class="text">
-                <span id="humidity-value">45%</span>
-                <p>Humidity</p>
+        <div class="location-not-found">
+            <h1>Sorry, Location not found!!!</h1>
+            <img src="/Weather-App-Assets/404.png">
+        </div>
+        <div class="weather-body">
+            <img src="/Weather-App-Assets/cloud.png" alt="Weather-Img" class="weather-img">
+            <div class="weather-box">
+                <p class="temperature">0 <sup>°C</sup></p>
+                <p class="description">light rain</p>
+            </div>
+            <div class="weather-details">
+                <div class="humidity">
+                    <i class="fas fa-droplet"></i>
+                    <div class="text">
+                        <span id="humidity-value">45%</span>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="wind">
+                    <i class="fas fa-wind"></i>
+                    <div class="text">
+                        <span id="wind-speed-value">12Km/H</span>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
             </div>
         </div>
-    
-        <div class="wind">
-            <i class="fas fa-wind"></i>
-            <div class="text">
-                <span id="wind-speed-value">12Km/H</span>
-                <p>Wind Speed</p>
-            </div>
-        </div>
     </div>
-    
-    </div>
-
-   </div>
+    <script src="Weather-App.js"></script>
 </body>
 </html>

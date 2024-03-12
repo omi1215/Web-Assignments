@@ -1,150 +1,98 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-.content{
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 100%; /* Change to a smaller value or remove it */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input.location {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button#searchBtn {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.location-not-found {
+    display: none;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.weather-body {
+    text-align: center;
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
-.search{
-    border: 1px solid black;
-    width: 30%;
-    height: 400px;
-}
-input{
-    width: 300px;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-    height: 30px;
-    margin-top: 20px;
-}
-input::placeholder{
-    text-align: center;
-}
 
-h2{
-    text-align: center;
-}
-
-.or-divider {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    margin: 20px 0;
-}
-
-.or-divider hr {
-    flex: 1;
-    border: none;
-    height: 1px;
-    background-color: #000;
-    margin: 0 10px;
-}
-
-.or-divider span {
-    font-weight: bold;
-}
-button {
-    width: 300px;
-    height: 40px;
-    margin: 20px auto;
-    display: block; /* Added */
-}
-.weather-body{
-    border: 1px solid black;
-    width: 35%;
-    height: 400px;
-    overflow: hidden;
-}
-.weather-img{
-    width: 250px;
-    margin: 5px auto;
+.weather-img {
+    max-width: 40%; /* Adjust the width of the image */
+    height: auto;
+    margin: 0 auto 20px;
     display: block;
 }
-.weather-box{
-    margin-block: 20px;
+
+.weather-box {
+    margin: 0 auto 20px;
+    text-align: center;
+    flex: 1 1 40%; /* Adjust the width of the weather box */
+}
+
+.weather-details {
     text-align: center;
 }
-.weather-box .temperature{
-    font-size: 30px;
-    font-weight: 800;
-    position: relative;
-}
-.weather-box .temperature sup{
-    font-size: 20px;
-    font-weight: absolute;
-    position: 600;
-}
-.weather-box .description{
-    font-size: 20px;
-    font-weight: 700;
-    text-transform: capitalize;
-}
-.weather-details{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-}
-.humidity, .wind{
-    display: flex;
-    align-items: center;
-}
-.wind{
-    margin-right: 20px;
-}
-.humidity{
-    margin-left: 20px;
-}
-.weather-details i{
-    font-size: 36px;
-}
-.weather-details .text{
-    margin-left: 10px;
-    font-size: 16px;
-}
-.text span{
-    font-size: 20px;
-    font-weight: 700;
-}
-/* Common styles */
 
-/* For screens larger than 768px */
-@media (min-width: 768px) {
-    .content {
-      flex-direction: row;
+.weather-details .humidity,
+.weather-details .wind {
+    margin: 0 10px;
+    margin-top: 5px;
+}
+
+.weather-details .text {
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    input.location {
+        width: 80%;
     }
-    .search,
-    .weather-body {
-      width: 45%;
-      height: 700px;
+
+    button#searchBtn {
+        width: 80%;
     }
-  }
-  
-  /* For screens smaller than 768px */
-  @media (max-width: 767px) {
-    .content {
-      flex-direction: column;
-      align-items: center;
-    }
-    .search,
-    .weather-body {
-      width: 90%;
-      margin-bottom: 20px;
-      height: 700px;
-    }
-    button {
-      width: 100%;
-    }
-  }
-  
-  /* For screens smaller than 480px */
-  @media (max-width: 479px) {
-    input {
-      width: 100%;
-    }
+
     .weather-img {
-      width: 80%;
+        max-width: 80%;
     }
-  }
-  
+}
