@@ -1,0 +1,49 @@
+.main{
+    width: 60%;
+    height: 400px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+.game-body {
+    justify-content: center;
+    margin-top: 40px;
+    display: flex;
+    justify-content:space-around;
+    overflow: hidden; 
+    align-items: flex-start;
+}
+
+.op1 img,
+.op2 img {
+    width: 150px;
+    object-fit: cover; 
+}
+
+.flip1{
+    
+    transform: rotate(90deg);
+}
+
+.flip2{
+    
+    transform: rotate(270deg) scaleX(-1);
+}
+
+.choices{
+    display: flex;
+    justify-content:center;
+    gap: 30px;
+    margin-top: auto;
+    margin-bottom: 15px;
+}
+.choices > img{
+    width: 60px;
+    opacity: 0.5;
+}
+
+.rock:hover, .scissors:hover, .paper:hover{
+    opacity: 1;
+}
