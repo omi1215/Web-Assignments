@@ -10,11 +10,11 @@ body {
 }
 
 .container {
-    max-width: 100%; /* Change to a smaller value or remove it */
+    width: 100%;
+    max-width: 600px; /* Adjust maximum width */
     margin: 0 auto;
     padding: 20px;
 }
-
 
 h2 {
     text-align: center;
@@ -27,13 +27,13 @@ h2 {
 }
 
 input.location {
-    width: 100%;
+    width: 70%; /* Adjust input width */
     padding: 10px;
     margin-bottom: 10px;
 }
 
 button#searchBtn {
-    width: 100%;
+    width: 70%; /* Adjust button width */
     padding: 10px;
     background-color: #4CAF50;
     color: white;
@@ -50,27 +50,30 @@ button#searchBtn {
 .weather-body {
     text-align: center;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-info {
+    display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    gap: 100px;
 }
 
 .weather-img {
     max-width: 40%; /* Adjust the width of the image */
-    height: auto;
-    margin: 0 auto 20px;
-    display: block;
+    height: auto; /* Ensure aspect ratio is maintained */
+    margin-right: 20px;
 }
 
 .weather-box {
-    margin: 0 auto 20px;
     text-align: center;
-    flex: 1 1 40%; /* Adjust the width of the weather box */
 }
 
 .weather-details {
     text-align: center;
+    margin-top: 20px;
 }
 
 .weather-details .humidity,
@@ -83,7 +86,7 @@ button#searchBtn {
     font-size: 14px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     input.location {
         width: 80%;
     }
@@ -94,5 +97,13 @@ button#searchBtn {
 
     .weather-img {
         max-width: 80%;
+        margin-right: 0;
     }
+
+    .weather-info {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
 }
