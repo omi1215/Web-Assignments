@@ -1,2 +1,2 @@
 # web assignments
-Multiple Branches for the assignments and have been created feel free to check them out.
+Multiple Branches for the assignments have been created feel free to check them out.
